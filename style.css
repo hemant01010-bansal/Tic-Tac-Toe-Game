@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Delius+Swash+Caps&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav{
+    background-color: rgb(21,21,21);
+    color: white;
+    height: 10vh;
+    max-width: 100vw;
+    display: flex;
+    justify-content: space-between;  /*it take website name to left and nav links to right*/
+    align-items: center;  /*align items verticaly center*/
+    font-family: "Delius", cursive;
+    font-size: 1.5rem;
+    padding: 0 20px;
+}
+
+nav div{
+    cursor: pointer;
+}
+
+.navLinks{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+nav div a{
+    text-decoration: none;
+    color: white;
+}
+
+.navLinks a, .navLinks .aboutTag{
+    transition: opacity 0.3sec;
+}
+
+.navLinks .aboutTag{
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    margin-left: 15px;
+
+}
+
+.navLinks:hover a{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.navLinks:hover .aboutTag{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+}
+
+.box{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8vw;
+    font-family: "Delius", cursive;
+    cursor: pointer;
+}
+
+.box:hover{
+    background-color: rgba(171, 164, 177, 0.806);
+}
+
+.gameInfo{
+    padding: 0 34px;
+}
+
+.turnInfo{
+    margin-top: 15%;
+    margin-bottom: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+.turnInfo span{
+    font-size: 1.5em;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+.imgbox{
+    display: none;
+    height: 10em;
+    width: 10em;
+    transform: flex;
+    margin-left: 37%;
+    /* translate: 20px; */
+}
+
+.imagebox img{
+    object-fit: cover;
+    width: 100%;  /*want to make height & width responsive but not achieve the goal.*/
+    height: auto;
+}
+.gameInfo h1{
+    font-size: 3vw;
+    font-family: "Delius", cursive;
+}
+
+.reset{
+    height: 5vh;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reset button{
+    height: 5vh;
+    padding-left: 1.5vw;
+    padding-right: 1.5vw;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    background-color: rgba(196, 192, 200, 0.806);
+}
+
+.reset button:hover{
+    background-color: #b3bac0;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 2px grey;
+}
+
+.reset button:active{
+    background-color: white;
+    box-shadow: none;
+}
+.bl-0{
+    border-left: 0px;
+}
+
+.br-0{
+    border-right: 0px;
+}
+
+.bb-0{
+    border-bottom: 0px;
+}
+
+.bt-0{
+    border-top: 0px;
+}
+
+@media (max-width: 700px) {
+    .gameContainer{
+        display: block;
+        
+    }
+    
+    .container{
+        margin-left: 32.5vw;
+
+    }
+
+    .gameInfo h1{
+        display: none;
+    }
+}
