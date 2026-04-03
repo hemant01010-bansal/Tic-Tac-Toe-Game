@@ -115,6 +115,7 @@ nav div a{
 .gameInfo h1{
     font-size: 3vw;
     font-family: "Delius", cursive;
+    cursor: default;
 }
 
 .reset{
