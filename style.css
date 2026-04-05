@@ -82,7 +82,14 @@ nav div a{
 }
 
 .gameInfo{
-    padding: 0 34px;
+    width: 50vw;
+    padding: 0 44px;
+}
+
+.heading{
+    margin-top: 25%;
+    display: flex;
+    justify-content: center;
 }
 
 .turnInfo{
@@ -96,6 +103,10 @@ nav div a{
     font-size: 1.5em;
     padding-left: 3vw;
     padding-right: 3vw;
+}
+
+.info{
+    display: none;
 }
 
 .imgbox{
@@ -143,12 +154,15 @@ nav div a{
     background-color: #b3bac0;
     border: 2px solid black;
     border-radius: 5px;
-    box-shadow: 5px 5px 2px grey;
 }
 
 .reset button:active{
     background-color: white;
     box-shadow: none;
+}
+
+#resetBTN{
+    display: none;
 }
 .bl-0{
     border-left: 0px;
@@ -177,7 +191,12 @@ nav div a{
 
     }
 
+    .gameInfo{
+        width: 100%;
+        padding: 0;
+    }
+
     .gameInfo h1{
-        display: none;
+        font-size: 6vw;
     }
 }

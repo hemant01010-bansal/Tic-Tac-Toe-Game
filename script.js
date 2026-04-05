@@ -3,6 +3,8 @@ let gameover = new Audio("GameComplete.mp3");
 
 let turn = "X";
 
+let isStart=false;
+
 //function to change turn
 const changeTurn = ()=>{
     return turn === "X" ? "O" : "X";
@@ -54,7 +56,7 @@ for (let box of boxes){
         let boxtext=box.querySelector(".boxtext");  //access the element where we have to print the player turn
         let turnInfo=document.querySelector(".info");  //access the space or element where we print information regarding player turn, win & draw.
 
-        if (boxtext.innerText=="" && isWin==false){
+        if (boxtext.innerText=="" && isWin==false && isStart==true){
             boxtext.innerText=turn;  //put the value of turn in the clicked box
             turn=changeTurn();  //change the turn with the help of 'changeTurn' function
             turnInfo.innerText=`Turn of ${turn}`;  //display whose turn
@@ -82,4 +84,17 @@ for (let box of boxes){
 let reset=document.querySelector("#resetBTN");
 reset.addEventListener("click",()=>{
     location.reload();
+})
+
+//start playing
+let startPlaying=document.querySelector("#startGame");
+let heading=document.querySelector(".heading");
+let info=document.querySelector(".info");
+console.log(info);
+startPlaying.addEventListener("click",()=>{
+    isStart=true;
+    startPlaying.style.display="none";
+    reset.style.display="inline";
+    heading.style.display="none";
+    info.style.display="inline";
 })
