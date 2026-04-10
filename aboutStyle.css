@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: rgb(21,21,21);
+    color: white;
+    height: 10vh;
+    max-width: 100vw;
+    display: flex;
+    justify-content: space-between;  /*it take website name to left and nav links to right*/
+    align-items: center;  /*align items verticaly center*/
+    font-family: "Delius", cursive;
+    font-size: 1.5rem;
+    padding: 0 20px;
+}
+
+nav div{
+    cursor: pointer;
+}
+
+.container{
+    height: 70vh;
+    background-color: rgb(234, 235, 249);
+    color: rgb(16, 20, 20);
+    
+}
+
+.container h1{
+    text-align: center;
+    font-family: "Delius", cursive;
+}
+
+.subSection1-2{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.section-4{
+    display: flex;
+    gap: 35px;
+    /* padding: 20px; */
+}
+
+.forSection{
+    background-color: aliceblue;
+    color: dimgrey;
+    border: 2px solid black;
+    border-radius: 4px;
+    box-shadow: 5px 5px 3px rgb(41, 39, 39),-5px -5px 3px rgb(41, 39, 39);
+    font-family: "Delius", cursive;
+    padding: 4px;
+}
+
+.forSectionHeading{
+    font-size: 1.5em;
+    color: rgb(83, 81, 81);
+    font-weight: 600;
+}
