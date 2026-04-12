@@ -29,14 +29,31 @@ const checkWin = ()=>{
         let pos1val=boxes[pat[0]].querySelector(".boxtext").innerText;
         let pos2val=boxes[pat[1]].querySelector(".boxtext").innerText;
         let pos3val=boxes[pat[2]].querySelector(".boxtext").innerText;
+        let box1=boxes[pat[0]].querySelector(".boxtext");
+        let box2=boxes[pat[1]].querySelector(".boxtext");
+        let box3=boxes[pat[2]].querySelector(".boxtext");
         if (pos1val===pos2val && pos2val===pos3val && pos1val===pos3val && pos1val!="" && pos2val!="" && pos3val!=""){
-            document.querySelector(".info").innerText=`${pos1val} WIN!`;
+            setTimeout(()=>{
+                document.querySelector(".info").innerText=`${pos1val} WIN!`;
+                document.querySelector(".imgbox").style.display="flex";
+            },1600);
             gameover.play();
             isWin=true;
-            document.querySelector(".imgbox").style.display="flex";
             turnInfo.style.border="3px groove black"
             turnInfo.style.borderRadius="6px";
             turnInfo.style.boxShadow="1px 1px 2px black, 0 0 25px grey, 0 0 5px grey";
+            for (let box of boxes){
+                box.style.color="rgba(171,164,177,0.806)";
+            }
+            setTimeout(()=>{
+                box1.style.color="rgb(0, 0, 0)";
+                setTimeout(()=>{
+                    box2.style.color="rgb(0, 0, 0)";
+                    setTimeout(()=>{
+                        box3.style.color="rgb(0, 0, 0)";
+                    },350);
+                },350);
+            },350);
         }
         
     }
