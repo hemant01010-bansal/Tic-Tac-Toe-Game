@@ -35,7 +35,6 @@ const checkWin = ()=>{
         if (pos1val===pos2val && pos2val===pos3val && pos1val===pos3val && pos1val!="" && pos2val!="" && pos3val!=""){
             setTimeout(()=>{
                 document.querySelector(".info").innerText=`${pos1val} WIN!`;
-                document.querySelector(".imgbox").style.display="flex";
             },1600);
             gameover.play();
             isWin=true;

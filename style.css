@@ -110,20 +110,6 @@ nav div a{
     display: none;
 }
 
-.imgbox{
-    display: none;
-    height: 10em;
-    width: 10em;
-    transform: flex;
-    margin-left: 37%;
-    /* translate: 20px; */
-}
-
-.imagebox img{
-    object-fit: cover;
-    width: 100%;  /*want to make height & width responsive but not achieve the goal.*/
-    height: auto;
-}
 .gameInfo h1{
     font-size: 3vw;
     font-family: "Delius", cursive;
