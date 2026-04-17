@@ -33,30 +33,47 @@ const checkWin = ()=>{
         let box2=boxes[pat[1]].querySelector(".boxtext");
         let box3=boxes[pat[2]].querySelector(".boxtext");
         if (pos1val===pos2val && pos2val===pos3val && pos1val===pos3val && pos1val!="" && pos2val!="" && pos3val!=""){
-            setTimeout(()=>{
-                document.querySelector(".info").innerText=`${pos1val} WIN!`;
-            },300);
+            document.querySelector(".info").innerText=`${pos1val} WIN!`;
             gameover.play();
             isWin=true;
             turnInfo.style.border="3px groove black"
             turnInfo.style.borderRadius="6px";
             turnInfo.style.boxShadow="1px 1px 2px black, 0 0 25px grey, 0 0 5px grey";
+            //dull text of all boxes
             for (let box of boxes){
                 box.style.color="rgba(171,164,177,0.806)";
             }
-            winingEffect();
-            winingEffect();
+            winingEffect(25);
+            winingEffect(20);
+            //highlight text in which pattern is formed
             setTimeout(()=>{
                 box1.style.color="rgb(0, 0, 0)";
                 setTimeout(()=>{
                     box2.style.color="rgb(0, 0, 0)";
-                    winingEffect();
+                    winingEffect(20);
                     setTimeout(()=>{
                         box3.style.color="rgb(0, 0, 0)";
-                        winingEffect();
+                        winingEffect(20);
                     },350);
                 },350);
             },350);
+
+            //after winning the effect working so that user feel good 
+            setTimeout(()=>{
+                winingEffect(10);
+                setTimeout(()=>{
+                    winingEffect(10);
+                    setTimeout(()=>{
+                        winingEffect(10);
+                        setTimeout(()=>{
+                            winingEffect(10);
+                            setTimeout(()=>{
+                                winingEffect(10);
+                            },2000)
+                        },2000)
+                    },2000)
+                },2000)
+            },2000)
         }
         
     }
@@ -119,8 +136,8 @@ startPlaying.addEventListener("click",()=>{
     info.style.display="inline";
 })
 
-function winingEffect(){
-    for (i=0;i<20;i+=1){
+function winingEffect(x){
+    for (i=0;i<x;i+=1){
         let bubble=document.createElement("div");
         bubble.classList.add("bubble");
         document.body.appendChild(bubble);
