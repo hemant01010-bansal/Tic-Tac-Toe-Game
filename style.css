@@ -223,3 +223,16 @@ nav div a{
         margin-left: 20px;
     }
 }
+
+.bubble{
+    width: 11px;
+    height: 12px;
+    position: fixed;
+    top: 10vh;
+}
+
+@keyframes fall{
+        to{
+            transform: translateY(100vh) rotateY(860deg);
+    }
+}

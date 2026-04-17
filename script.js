@@ -44,12 +44,16 @@ const checkWin = ()=>{
             for (let box of boxes){
                 box.style.color="rgba(171,164,177,0.806)";
             }
+            winingEffect();
+            winingEffect();
             setTimeout(()=>{
                 box1.style.color="rgb(0, 0, 0)";
                 setTimeout(()=>{
                     box2.style.color="rgb(0, 0, 0)";
+                    winingEffect();
                     setTimeout(()=>{
                         box3.style.color="rgb(0, 0, 0)";
+                        winingEffect();
                     },350);
                 },350);
             },350);
@@ -114,3 +118,19 @@ startPlaying.addEventListener("click",()=>{
     heading.style.display="none";
     info.style.display="inline";
 })
+
+function winingEffect(){
+    for (i=0;i<20;i+=1){
+        let bubble=document.createElement("div");
+        bubble.classList.add("bubble");
+        document.body.appendChild(bubble);
+        bubble.style.left=Math.random()*100+"%";
+        bubble.style.backgroundColor=`rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`;
+        bubble.style.borderRadius=`${Math.random()*100}%`;
+        let x=Math.random()*3;
+        bubble.style.animation=`fall ${x}s linear`;
+        setTimeout(()=>{
+            bubble.remove();
+        },x*1000);
+    }
+}
