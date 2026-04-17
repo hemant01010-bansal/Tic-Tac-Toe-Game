@@ -83,7 +83,7 @@ nav div a{
 }
 
 .gameInfo{
-    width: 50vw;
+    width: 35vw;
     padding: 0 44px;
 }
 
@@ -207,10 +207,10 @@ nav div a{
         padding: 1vh 0 1vh 0;
     }
     .heading{
-        margin-top: 20%;
+        margin-top: 15%;
     }
     .turnInfo{
-        margin-top: 15%;
+        margin-top: 10%;
         margin-bottom: 5%;
     }
 }
