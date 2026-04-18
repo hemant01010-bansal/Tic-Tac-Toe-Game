@@ -60,9 +60,9 @@ const checkWin = ()=>{
 
             //after winning the effect working so that user feel good 
             setTimeout(()=>{
-                winingEffect(10);
+                winingEffect(30);
                 setTimeout(()=>{
-                    winingEffect(10);
+                    winingEffect(30);
                     setTimeout(()=>{
                         winingEffect(10);
                         setTimeout(()=>{
