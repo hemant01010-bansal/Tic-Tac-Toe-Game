@@ -215,6 +215,12 @@ nav div a{
     }
 }
 
+@media (max-width: 768px){ /*in phones and tablets hover is not good*/
+    .box:hover{
+        background-color: rgb(251, 251, 251);
+    }
+}
+
 @media (min-width: 1100px){
     .container{
         display: grid;
