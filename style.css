@@ -35,10 +35,6 @@ nav div a{
     color: white;
 }
 
-.navLinks a, .navLinks .aboutTag{
-    transition: opacity 0.3sec;
-}
-
 .navLinks .aboutTag{
     opacity: 0;
     pointer-events: none;
