@@ -23,7 +23,6 @@ nav div{
 }
 
 .container{
-    height: 70vh;
     background-color: rgb(255, 255, 255);
     color: rgb(16, 20, 20);
     
@@ -46,11 +45,11 @@ nav div{
 }
 
 .forSection{
-    background-color: aliceblue;
+    background-color: white;
     color: dimgrey;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 4px;
-    box-shadow: 5px 5px 3px rgb(41, 39, 39),-5px -5px 3px rgb(41, 39, 39);
+    box-shadow: 0px 0px 4px rgb(41, 39, 39),0px 0px 4px rgb(41, 39, 39);
     font-family: "Delius", cursive;
     padding: 4px;
 }
@@ -59,4 +58,45 @@ nav div{
     font-size: 1.5em;
     color: rgb(83, 81, 81);
     font-weight: 600;
+}
+
+.back{
+    margin: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.backTitle{
+    font-size: 1.4rem;
+    font-weight: 550;
+}
+
+.backSubTitle{
+    color: rgb(83, 81, 81);
+}
+
+.back button{
+    width: 150px;
+    border-radius: 4px;
+    padding: 4px 2px;
+    font-size: 1.015rem;
+    transition: all 0.2s ease;
+    background-color: white;
+    color: black;
+}
+
+.back button:active{
+    transform: scale(0.9);
+}
+
+@media (min-width: 768px){
+    .back button:hover{
+        transform: scale(1.1);
+    }
+
+    .back button:active{
+        transform: scale(0.9);
+    }
 }
